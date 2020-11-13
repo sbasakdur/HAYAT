@@ -19,6 +19,7 @@ namespace HayaTeknolojiCRM.Web.Controllers
         {
             _employeeService.GetAllList();
             return View();
+            //test
         }
      
     }
