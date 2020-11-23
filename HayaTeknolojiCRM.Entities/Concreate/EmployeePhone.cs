@@ -16,6 +16,6 @@ namespace HayaTeknolojiCRM.Entities.Concreate
         public string PhoneNumber { get; set; }
         [StringLength(50)]
         public string PhoneType { get; set; }
-        public virtual ICollection<EmployeePhoneEmployee> EmployeePhoneEmployees { get; set; }
+        public virtual List<EmployeePhoneEmployee> EmployeePhoneEmployees { get; set; }
     }
 }

@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace HayaTeknolojiCRM.DataAccess.Abstract
 {
-    public interface IEmployeeDal:IEntityRepository<Employee>
+    public interface IEmployeeDal : IEntityRepository<Employee>
     {
+        List<Department> GetDepartment();
+        //List<Employee> GetEmployeePhone();
     }
 }

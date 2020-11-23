@@ -1,0 +1,62 @@
+﻿@model IEnumerable<HayaTeknolojiCRM.Entities.Concreate.EmployeePermit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>İzin Listesi</h2>
+
+<p>
+    @Html.ActionLink("Yeni İzin Oluştur", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermitType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Day)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Employee.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StartDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EndDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PermitType)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Day)
+    </td>
+    <td>
+        <a href="/Permit/Edit/@item.PermitID" class="btn btn-primary">Düzenle</a>
+        <a href="/Permit/PermitDetail/@item.PermitID" class="btn btn-info">Detaylar</a>
+        <a href="/Permit/Delete/@item.PermitID" class="btn btn-danger btn-delete">Sil</a>
+    </td>
+</tr>
+}
+
+</table>

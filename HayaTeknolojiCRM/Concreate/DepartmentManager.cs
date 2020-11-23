@@ -4,6 +4,7 @@ using HayaTeknolojiCRM.Entities.Concreate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,9 +28,9 @@ namespace HayaTeknolojiCRM.Concreate
             _departmentDal.Delete(entity);
         }
 
-        public List<Department> GetAllList()
+        public List<Department> GetList(Expression<Func<Department, bool>> filter=null)
         {
-            return _departmentDal.GetAllList();
+            return _departmentDal.GetList(filter);
         }
 
         public Department GetById(int? id)

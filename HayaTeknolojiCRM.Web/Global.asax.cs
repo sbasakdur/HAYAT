@@ -25,6 +25,9 @@ namespace HayaTeknolojiCRM.Web
             builder.RegisterType<EmployeeDal>().As<IEmployeeDal>();
             builder.RegisterType<DepartmentManager>().As<IDepartmentService>();
             builder.RegisterType<DepartmentDal>().As<IDepartmentDal>();
+            builder.RegisterType<PermitManager>().As<IPermitService>();
+            builder.RegisterType<PermitDal>().As<IPermitDal>();
+
 
             IContainer container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
