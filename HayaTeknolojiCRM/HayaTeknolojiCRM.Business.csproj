@@ -52,9 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IDepartmentService.cs" />
+    <Compile Include="Abstract\IEmployeeExperienceService.cs" />
     <Compile Include="Abstract\IEmployeeService.cs" />
+    <Compile Include="Abstract\IPermitService.cs" />
     <Compile Include="Concreate\DepartmentManager.cs" />
+    <Compile Include="Concreate\EmployeeExperienceManager.cs" />
     <Compile Include="Concreate\EmployeeManager.cs" />
+    <Compile Include="Concreate\PermitManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

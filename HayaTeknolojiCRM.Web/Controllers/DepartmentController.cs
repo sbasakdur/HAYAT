@@ -19,7 +19,7 @@ namespace HayaTeknolojiCRM.Web.Controllers
         // GET: Department
         public ActionResult Index()
         {
-            var result = _departmentService.GetAllList();
+            var result = _departmentService.GetList();
             return View(result);
         }
         [HttpGet]

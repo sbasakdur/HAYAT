@@ -1,0 +1,77 @@
+﻿@model IEnumerable<HayaTeknolojiCRM.Entities.Concreate.EmployeePermit>
+
+@{
+    ViewBag.Title = "PermitHistory";
+}
+
+<h2>İzin Geçmişi</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartHour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndHour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermitType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Day)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartHour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndHour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PermitType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Day)
+        </td>
+
+        <td>
+         
+            @Html.ActionLink("Details", "Details", new { id=item.PermitID }) |
+         
+        </td>
+    </tr>
+}
+
+</table>

@@ -10,6 +10,11 @@ namespace HayaTeknolojiCRM.DataAccess.Concreate.Context
 {
     public class DatabaseContext : DbContext
     {
+
+        public DatabaseContext()
+        {
+            this.Configuration.LazyLoadingEnabled = false;
+        }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<EmployeeAddress> EmployeeAddresses { get; set; }

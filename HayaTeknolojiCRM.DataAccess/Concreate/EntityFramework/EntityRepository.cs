@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,23 +21,35 @@ namespace HayaTeknolojiCRM.DataAccess.Concreate.EntityFramework
                 context.SaveChanges();
             }
         }
+        public void Update(TEntity entity)
+        {
+            using (var context = new TContext())
+            {
 
+                context.Entry(entity).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+        }
         public void Delete(TEntity entity)
         {
             using (var context = new TContext())
             {
+                context.Set<TEntity>().Attach(entity);
                 context.Set<TEntity>().Remove(entity);
                 context.SaveChanges();
             }
         }
 
-        public List<TEntity> GetAllList()
+        public List<TEntity> GetList(Expression<Func<TEntity, bool>> filter = null)
         {
             using (var context = new TContext())
             {
-                return context.Set<TEntity>().ToList();
+                return filter == null
+                    ? context.Set<TEntity>().ToList()
+                    : context.Set<TEntity>().Where(filter).ToList();
             }
         }
+
 
         public TEntity GetById(int? id)
         {
@@ -54,16 +67,5 @@ namespace HayaTeknolojiCRM.DataAccess.Concreate.EntityFramework
                 return result;
             }
         }
-
-        public void Update(TEntity entity)
-        {
-            using (var context = new TContext())
-            {
-
-                context.Entry(entity).State = EntityState.Modified;
-                context.SaveChanges();
-            }
-        }
-
     }
 }

@@ -36,6 +36,11 @@ namespace HayaTeknolojiCRM.Entities.Concreate
          DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
         public DateTime StartDate { get; set; }
 
+        public IEnumerable<Employee> Where(Func<object, bool> p)
+        {
+            throw new NotImplementedException();
+        }
+
         [StringLength(50)]
         public string MaritalStatus { get; set; }
 

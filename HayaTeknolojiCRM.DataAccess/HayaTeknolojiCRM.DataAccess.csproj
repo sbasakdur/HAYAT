@@ -53,17 +53,22 @@
   <ItemGroup>
     <Compile Include="Abstract\IDepartmentDal.cs" />
     <Compile Include="Abstract\IEmployeeDal.cs" />
+    <Compile Include="Abstract\IEmployeeExperienceDal.cs" />
     <Compile Include="Abstract\IEntityRepository.cs" />
+    <Compile Include="Abstract\IPermitDal.cs" />
     <Compile Include="Concreate\Context\DatabaseContext.cs" />
     <Compile Include="Concreate\EntityFramework\DepartmentDal.cs" />
     <Compile Include="Concreate\EntityFramework\EmployeeDal.cs" />
+    <Compile Include="Concreate\EntityFramework\EmployeeExperience.cs" />
     <Compile Include="Concreate\EntityFramework\EntityRepository.cs" />
+    <Compile Include="Concreate\EntityFramework\PermitDal.cs" />
     <Compile Include="Migrations\202011121118101_initial.cs" />
     <Compile Include="Migrations\202011121118101_initial.designer.cs">
       <DependentUpon>202011121118101_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\EmployeeVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

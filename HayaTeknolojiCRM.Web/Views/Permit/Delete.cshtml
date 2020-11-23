@@ -1,0 +1,86 @@
+﻿@model HayaTeknolojiCRM.Entities.Concreate.EmployeePermit
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>İzni Sil</h2>
+
+<h3>Silmek istediğinize emin misiniz?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.SSN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.SSN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermitType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermitType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Day)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
