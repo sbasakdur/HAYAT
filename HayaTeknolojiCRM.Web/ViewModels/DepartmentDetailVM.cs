@@ -1,4 +1,4 @@
-﻿using HayaTeknolojiCRM.Entities.Concreate;
+using HayaTeknolojiCRM.Entities.Concreate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +10,6 @@ namespace HayaTeknolojiCRM.Web.ViewModels
     {
         public IEnumerable<Employee> Employee { get; set; }
         public IEnumerable<Department> Department { get; set; }
+
     }
 }
