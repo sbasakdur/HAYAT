@@ -1,0 +1,12 @@
+﻿.box-shadow {
+    box-shadow: 0px 0px 3px #818285 !important;
+}
+
+.font-dark {
+    font-weight: 600 !important;
+}
+
+.btn-color {
+    background-color: #4f89a4;
+    color: #ebf6e5;
+}

@@ -10,6 +10,5 @@ namespace HayaTeknolojiCRM.DataAccess.Abstract
     public interface IEmployeeDal : IEntityRepository<Employee>
     {
         List<Department> GetDepartment();
-        //List<Employee> GetEmployeePhone();
     }
 }

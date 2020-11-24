@@ -1,5 +1,6 @@
 ﻿using HayaTeknolojiCRM.Abstract;
 using HayaTeknolojiCRM.Entities.Concreate;
+using HayaTeknolojiCRM.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,11 @@ namespace HayaTeknolojiCRM.Web.Controllers
     public class DepartmentController : Controller
     {
         private readonly IDepartmentService _departmentService;
-        public DepartmentController(IDepartmentService departmentService)
+        private readonly IEmployeeService _employeeService;
+        public DepartmentController(IDepartmentService departmentService, IEmployeeService employeeService)
         {
             _departmentService = departmentService;
+            _employeeService = employeeService;
         }
         // GET: Department
         public ActionResult Index()
@@ -64,5 +67,20 @@ namespace HayaTeknolojiCRM.Web.Controllers
             return View(department);
         }
 
+        public ActionResult DepartmentDetail(int? id)
+        {
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            var department = _departmentService.GetList().Where(x => x.DepartmentId == id).ToList();
+            var employee = _employeeService.GetList().Where(x => x.DepartmentID == id).ToList();
+            DepartmentDetailVM departmentDetail = new DepartmentDetailVM()
+            {
+                Employee = employee,
+                Department = department
+            };
+            return View(departmentDetail);
+        }
     }
 }

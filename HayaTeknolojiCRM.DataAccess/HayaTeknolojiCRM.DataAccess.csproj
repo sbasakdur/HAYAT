@@ -59,7 +59,7 @@
     <Compile Include="Concreate\Context\DatabaseContext.cs" />
     <Compile Include="Concreate\EntityFramework\DepartmentDal.cs" />
     <Compile Include="Concreate\EntityFramework\EmployeeDal.cs" />
-    <Compile Include="Concreate\EntityFramework\EmployeeExperience.cs" />
+    <Compile Include="Concreate\EntityFramework\EmployeeExperienceDal.cs" />
     <Compile Include="Concreate\EntityFramework\EntityRepository.cs" />
     <Compile Include="Concreate\EntityFramework\PermitDal.cs" />
     <Compile Include="Migrations\202011121118101_initial.cs" />

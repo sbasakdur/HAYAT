@@ -1,0 +1,29 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("~/Content/images/KURUMSAL_ZEMİN.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-attachment: fixed;
+}
+
+p {
+    text-align: center;
+}
+
+#banner {
+    height: 80px;
+    background-image: linear-gradient(to right, #ebf6e5, #818285, #1191cb);
+    z-index:100;
+}
+
+#logo {
+    max-width: 100%;
+    height: 60px;
+    padding-top: 15px;
+    z-index: 101;
+}

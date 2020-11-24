@@ -27,6 +27,9 @@ namespace HayaTeknolojiCRM.Web
             builder.RegisterType<DepartmentDal>().As<IDepartmentDal>();
             builder.RegisterType<PermitManager>().As<IPermitService>();
             builder.RegisterType<PermitDal>().As<IPermitDal>();
+            builder.RegisterType<EmployeeExperienceManager>().As<IEmployeeExperienceService>();
+            builder.RegisterType<EmployeeExperienceDal>().As<IEmployeeExperienceDal>();
+
 
 
             IContainer container = builder.Build();

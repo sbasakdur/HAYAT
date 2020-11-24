@@ -17,18 +17,21 @@ namespace HayaTeknolojiCRM.Concreate
         {
             _employeeDal = employeeDal;
         }
-        //public List<Employee> GetEmployeePhone()
-        //{
-        //    return _employeeDal.GetEmployeePhone();
-        //}
         public void Create(Employee entity)
         {
             _employeeDal.Create(entity);
         }
-
+        public void Update(Employee entity)
+        {
+            _employeeDal.Update(entity);
+        }
         public void Delete(Employee entity)
         {
             _employeeDal.Delete(entity);
+        }
+        public IQueryable<Employee> ListQueryable()
+        {
+            return _employeeDal.ListQueryable();
         }
 
         public List<Employee> GetList(Expression<Func<Employee, bool>> filter=null)
@@ -44,18 +47,6 @@ namespace HayaTeknolojiCRM.Concreate
         public List<Department> GetDepartment()
         {
             return _employeeDal.GetDepartment();
-        }
-
-
-        public IQueryable<Employee> ListQueryable()
-        {
-            return _employeeDal.ListQueryable();
-        }
-
-
-        public void Update(Employee entity)
-        {
-            _employeeDal.Update(entity);
         }
     }
 }
