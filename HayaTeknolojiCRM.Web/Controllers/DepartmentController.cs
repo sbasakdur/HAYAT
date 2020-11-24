@@ -18,7 +18,7 @@ namespace HayaTeknolojiCRM.Web.Controllers
         {
             _departmentService = departmentService;
             _employeeService = employeeService;
-        }
+        } 
         // GET: Department
         public ActionResult Index()
         {
